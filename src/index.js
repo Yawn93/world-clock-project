@@ -21,10 +21,26 @@ let londonElement = document.querySelector("#london");
         londonDateElement.innerHTML = londonTime.format("MMMM Do YYYY");
         londonTimeElement.innerHTML = `${londonTime.format("h:mm:ss")} <small>${londonTime.format("A")}</small>`;
     }
+
+//Buenos Aires time
+let buenosAiresElement = document.querySelector("#buenos-aires");
+    if (buenosAiresElement) {
+        let buenosAiresDateElement = buenosAiresElement.querySelector(".date");
+        let buenosAiresTimeElement = buenosAiresElement.querySelector(".time");
+        let buenosAiresTime = moment().tz("America/Argentina/Buenos_Aires");
+
+        buenosAiresDateElement.innerHTML = buenosAiresTime.format("MMMM Do YYYY");
+        buenosAiresTimeElement.innerHTML = `${buenosAiresTime.format("h:mm:ss")} <small>${buenosAiresTime.format("A")}</small>`;
+    }
 };
 
 function showSelectedCity(event) {
     let cityTimeZone = event.target.value;
+
+    if (event.target.value === 'current') {
+        cityTimeZone = moment.tz.guess();
+    }
+
     let cityTime = moment().tz(cityTimeZone);
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let citiesElement = document.querySelector("#cities");
