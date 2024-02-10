@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/styles.css">
+    <title>World Clock Project</title>
+</head>
+<body>
+    <div class="container">
+        <img src="https://static.vecteezy.com/system/resources/previews/009/589/193/non_2x/clock-transparent-free-png.png" />
+        <div class="row">
+            <h1>What's the time in...</h1>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <select id="city">
+                    <option value="">Select another city</option>
+                    <option value="current">Your current city</option>
+                    <option value="Europe/Paris">Paris</option>
+                    <option value="Asia/Tokyo">Tokyo</option>
+                    <option value="America/Chicago">Chicago</option>
+                </select>
+            </div>
+        </div>
+        <div id="cities">
+            <div class="row" id="amsterdam">
+                <div class="col-6">
+                    <h2>Amsterdam</h2>
+                    <p class="date"></p>
+                </div>
+                <div class="col-6">
+                    <p class="time"></p>
+                </div>
+            </div>
+            <hr class="dotted">
+            <div class="row" id="london">
+                <div class="col-6">
+                    <h2>London</h2>
+                    <p class="date"></p>
+                </div>
+                <div class="col-6">
+                    <p class="time"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="coded">Coded by <a href="">Beatriz St.Aubyn</a> and <a href="">open-sourced on Github</a></p>
+    <script src="src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
